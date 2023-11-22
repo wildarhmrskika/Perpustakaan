@@ -1,0 +1,1 @@
+Buat konsep oop untuk pencarian agar lowercase
