@@ -24,19 +24,22 @@ def index():
 			return render_template('notfound.html')
 @app.route('/dash', methods = ['GET','POST'])
 def dash():
-	ok = ""
-	Aj = request.form.get('judul')
+	Aj = request.form.get('Hebat')
 	Ak = request.form.get('kategori')
 	Ad = request.form.get('deskripsi')
 	Af = request.form.get('file')
-	As = Aj = request.form.get('sampul')
+	As = request.form.get('sampul')
+
+
 	if request.method == 'GET':
-		return render_template('info.html', ok=ok)
+		return render_template('info.html')
 	else:
-		# curs = conn.cursor()
-		# cek = curs.execute(f"insert into buku values (null,'{Aj}','{Ak}','{Ad}','{Af}','{As}')")
+		curs = conn.cursor()
+		cek = curs.execute(f"insert into buku values (null,'{Aj}','{Ak}','{Ad}','{Af}','{As}')")
+		f = request.files['sampul']
+		f.save(f.filename)
 		# conn.commit()
-		return 'pl'
+		# return Aj
 
 		if cek:
 			return redirect(url_for('index'))
