@@ -13,7 +13,7 @@
       crossorigin="anonymous"
     />
     <!--Custom CSS-->
-    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="/static/login.css" />
     <title>Login Admin</title>
   </head>
   <body>
@@ -22,12 +22,12 @@
         <div class="card-body">
           <h1 class="card-title text-center">L O G I N</h1>
           <div class="card-text">
-            <form>
+            <form method="post">
               <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label"
                   >Username</label
                 >
-                <input type="text" class="form-control" id="user" />
+                <input type="text" class="form-control" id="user" name="user" />
               </div>
               <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label"
@@ -37,6 +37,7 @@
                   type="password"
                   class="form-control"
                   id="exampleInputPassword1"
+                  name='pass'
                 />
               </div>
               <div class="mb-3 form-check">

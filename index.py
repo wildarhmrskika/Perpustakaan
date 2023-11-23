@@ -17,19 +17,33 @@ def index():
 	elif request.method == 'POST':
 		search = cur.execute('select * from terbaru where LOWER(judul)=LOWER("{}")'.format(request.form.get('ok'))).fetchall()	
 		if(search):
-			return search
+			return render_template('cari.html', hebat=search)
 		else:
-			return 'data tidak ada'
+			return render_template('notfound.html')
 
 @app.route('/admin', methods = ['GET', 'POST'])
 def login():
 	user = request.form.get('user')
 	pw = request.form.get('pass')
 	if request.method == 'GET':
-		return render_template('admin.html')
+		return render_template('login.html')
 	elif request.method == 'POST':
 		l = Login(user,pw)
-		return l.Check()
+		if l.Check() == '200':
+			b = request.form.get('judul')
+			c = request.form.get('kategori')
+			d = request.form.get('deskripsi')
+			e = request.form.get('file')
+			g = request.form.get('sampul')
+			return render_template('info.html')
+			i = hebat(b,c,d,e,g)
+			keren = i.insertData()
+			if keren:
+				return b,c,d,e,g
+			else:
+				return 'not ok'
+		else:
+			return render_template('login.html')
 
 
 if __name__ == '__main__':

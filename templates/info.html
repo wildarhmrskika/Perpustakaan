@@ -16,27 +16,21 @@
     <title>Perpustakaan Online</title>
   </head>
   <body>
+    <form method="post">
     <div class="container mt-5">
       <h3 class="text-center mb-4">Masukan Info Buku</h3> 
       <div class="mb-3 row">
         
         <label for="text" class="col-sm-2 col-form-label">Judul Buku</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="judul" />
-        </div>
-      </div>
-
-      <div class="mb-3 row">
-        <label for="text" class="col-sm-2 col-form-label">Penulis</label>
-        <div class="col-sm-10">
-          <input type="text" class="form-control" id="penulis" />
+          <input type="text" class="form-control" id="judul" name="judul" />
         </div>
       </div>
 
       <div class="mb-3 row">
         <label for="pengarang" class="col-sm-2 col-form-label">Kategori</label>
         <div class="col-sm-10">
-          <select name="kategori" id="kategori" class="form-control">
+          <select name="kategori" id="kategori" class="form-control" >
             <option value="sd">SD</option>
             <option value="smp">SMP</option>
             <option value="smp">SMA</option>
@@ -50,7 +44,7 @@
         <label for="text" class="col-sm-2 col-form-label">Deskripsi</label>
         <div class="col-sm-10">
           <div class="mb-3">
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="deskripsi"></textarea>
           </div>
         </div>
       </div>
@@ -63,6 +57,7 @@
             type="file"
             id="formFileMultiple"
             multiple
+            name='file'
           />
         </div>
       </div>
@@ -75,11 +70,13 @@
             type="file"
             id="formFileMultiple"
             multiple
+            name='sampul'
           />
         </div>
       </div>
     </div>
-
+    <input type="submit" value="ok">
+</form>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
