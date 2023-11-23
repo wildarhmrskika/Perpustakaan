@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page_404 {
+  padding: 40px;
+  background: #fff;
+  font-family: "Arvo", serif;
+}
+.page_404 img {
+  width: 100%;
+}
+.four_zero_four_bg {
+  margin-left: 200px;
+  margin-top: 10px;
+  background-image: url(gambar/giphy.gif);
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.h2,.p{
+  margin-left: 200px; 
+}

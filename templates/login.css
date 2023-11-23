@@ -1,0 +1,21 @@
+html,body{
+  height: 100%;
+  background-color: white !important;
+}
+
+.global-container {
+  margin-top: auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1a5349; 
+}
+
+.login-form {
+  width: 380px;
+  height: 450px;
+  padding: 20px;
+  background-color: white !important;
+  border-radius: 20px !important;
+}
