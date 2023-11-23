@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 import sqlite3 
-from fun import *
+from konsepOOP import *
 
 app = Flask('__name__') 
 
@@ -15,7 +15,7 @@ def index():
 		print(a)
 		return render_template('index.html', data=data,	a=a)
 	elif request.method == 'POST':
-		search = cur.execute('select * from terbaru where judul="{}"'.format(request.form.get('ok'))).fetchall()	
+		search = cur.execute('select * from terbaru where LOWER(judul)=LOWER("{}")'.format(request.form.get('ok'))).fetchall()	
 		if(search):
 			return search
 		else:
