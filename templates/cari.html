@@ -52,27 +52,13 @@
     </nav>
     {% for i in hebat%}
     <div class="container mt-3 d-flex g justify-content-center text-center">
-      <div class="card mb-3">
-        <center>
-          <img
-            src="/static/{{ i[2] }}"
-            class="card-img-top"
-            alt="gambar"
-            style="width: 400px"
-          />
-        </center>
+      <div class="card mb-3 ">
+        <center><img src="/static/img/{{ i[5] }}" class="card-img-top" alt="gambar" style="width: 400px;"></center>
         <div class="card-body">
           <h5 class="card-title">{{ i[1]}}</h5>
-          <p class="card-text">
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </p>
-          <p class="card-text">
-            <small class="text-muted">Putri Angraini Aziz</small>
-          </p>
-          <button type="button" class="btn btn-info mt-2" style="width: 100%">
-            <b>Baca Buku</b>
-          </button>
+          <p class="card-text"></p>
+          <p class="card-text"><small class="text-muted">{{ i[3]}}</small></p>
+          <button type="button" class="btn btn-info mt-2" style="width: 100%;"><b>Baca Buku</b></button> 
         </div>
       </div>
     </div>
