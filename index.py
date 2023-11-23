@@ -67,6 +67,7 @@ def login():
 def baca(keren):
 	cur = conn.cursor()
 	medata = cur.execute(f'select * from terbaru where id={keren}').fetchall()	
+	print(medata)
 	return render_template('read.html',medata=medata)
 
 if __name__ == '__main__':

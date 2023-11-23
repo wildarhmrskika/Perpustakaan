@@ -80,13 +80,13 @@
         </center>
       </div>
       {% for i in data %}
-      <div class="card" style="width: 15rem">
-        <img src="static/img/{{ i[5] }}" class="card-img-top" alt="gambar" />
-        <div class="card-body">
+      <div class="card" style="width: 18rem">
+        <img src="static/img/{{ i[5] }}" class="card-img-top" alt="gambar" height="300" />
+        <div class="card-body mx-auto text-center">
           <p class="card-text">
           	<h5 class="text-center"> {{ i[1] }} </h5>
           </p>
-          <button type="button" class="btn btn-outline-primary"><a href='{{ url_for("baca", keren=i[0] ) }}'> Baca Buku</a></button>
+          <button type="button" class="btn btn-outline-primary"><a class="text-decoration-none" href='{{ url_for("baca", keren=i[0] ) }}'> Baca Buku</a></button>
         </div>
       </div>
       {% endfor %}
