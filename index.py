@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 import sqlite3 
-from fun import *
+from konsepOOP import *
 
 app = Flask('__name__') 
 
