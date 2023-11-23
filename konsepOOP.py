@@ -6,11 +6,13 @@ class FetchDb:
 
 	def fetchA(self):
 		data = self.conn.execute('select * from terbaru').fetchall()
+		self.conn.close()
 		return data
 
 class tagar(FetchDb):
 	def fetchA(self):
 		data = self.conn.execute('select * from tagar').fetchall()
+		self.conn.close()
 		return data
 
 class Hebat(FetchDb):
