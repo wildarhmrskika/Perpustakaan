@@ -1,9 +1,0 @@
-Buat konsep oop untuk pencarian agar lowercase >> nyoman
-Buat Html untuk halaman admin,pencarian,buku-tidak-ditemukan,login >> front end
-
-buat ppt >> sudah
-flowchart >> sudah 
-konsep oop >> Login, fetching database, Penarian Lowercase
-
-1
-
