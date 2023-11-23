@@ -2,7 +2,7 @@ import sqlite3
 
 class FetchDb:
 	def __init__(self):
-		self.conn = sqlite3.connect('test.db')
+		self.conn = sqlite3.connect('db_belajar_jalan.db',isolation_level=None)
 
 	def fetchA(self):
 		data = self.conn.execute('select * from terbaru').fetchall()

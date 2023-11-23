@@ -96,7 +96,7 @@
     >
       <div class="container text-center">
       	{% for i in a %}
-        <button type="button" class="btn btn-outline-primary">{{ i[0] }}</button>
+        <button type="button" class="btn btn-outline-primary">{{ i[1] }}</button>
         {% endfor %}
         <center>
           <hr style="width: 50vh" />
@@ -104,12 +104,12 @@
       </div>
       {% for i in data %}
       <div class="card" style="width: 15rem">
-        <img src="/static/{{ i[2] }}" class="card-img-top" alt="..." />
+        <img src="static/img/{{ i[5] }}" class="card-img-top" alt="gambar" />
         <div class="card-body">
           <p class="card-text">
           	<h5> {{ i[1] }} </h5>
           </p>
-          <button type="button" class="btn btn-outline-primary">Primary</button>
+          <button type="button" class="btn btn-outline-primary"><a href='{{ url_for("baca", keren=i[0] ) }}'> Baca Buku</a></button>
         </div>
       </div>
       {% endfor %}
