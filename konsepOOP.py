@@ -14,8 +14,6 @@ class tagar(FetchDb):
 		data = self.conn.execute('select * from tagar').fetchall()
 		self.conn.close()
 		return data
-#TEST FUNCTION 
-#DI MATIKAN FUNCTION
 #class Hebat(FetchDb):
 #	def __init__ (self,judul,kategori,deskripsi,file,sampul):
 #		self.judul = judul
