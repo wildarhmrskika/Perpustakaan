@@ -1,5 +1,5 @@
 import sqlite3 
-#di 
+ 
 class FetchDb:
 	def __init__(self):
 		self.conn = sqlite3.connect('db_belajar_jalan.db',isolation_level=None)
