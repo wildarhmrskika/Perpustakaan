@@ -5,7 +5,7 @@ from konsepOOP import *
 app = Flask('__name__') 
 
 conn = sqlite3.connect('db_belajar_jalan.db',check_same_thread=False,isolation_level=None)
-
+#update ke-3
 # id = '2'
 @app.route('/', methods = ['GET', 'POST'])
 def index():
