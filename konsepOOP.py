@@ -8,7 +8,7 @@ class FetchDb:
 		data = self.conn.execute('select * from terbaru').fetchall()
 		self.conn.close()
 		return data
-
+#fetch tagar
 class tagar(FetchDb):
 	def fetchA(self):
 		data = self.conn.execute('select * from tagar').fetchall()
