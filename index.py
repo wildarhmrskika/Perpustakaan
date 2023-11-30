@@ -70,5 +70,10 @@ def baca(keren):
 	print(medata)
 	return render_template('read.html',medata=medata)
 
+@app.route('/tags/<fantastik>')
+def abc(fantastik):
+	cur = conn.cursor()
+	panini = cur.execute(f"SELECT * FROM terbaru WHERE kategori='{fantastik}'").fetchall()
+	return render_template('tags.html',panini=panini)
 if __name__ == '__main__':
 	app.run(debug=True)
