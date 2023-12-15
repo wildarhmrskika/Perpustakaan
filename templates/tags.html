@@ -75,9 +75,9 @@
             <h5 class="card-title">{{ i[1]}}</h5>
             <p class="card-text"></p>
             <p class="card-text"><small class="text-muted">{{ i[3]}}</small></p>
-            <button type="button" class="btn btn-info mt-2" style="width: 100%">
-              <b>Baca Buku</b>
-            </button>
+             <a class="text-decoration-none" href='{{ url_for("baca", keren=i[0] ) }}'>
+                <button type="button" class="btn btn-info mt-2" style="width: 100%">Baca Buku</button>
+              </a>
           </div>
         </div>
       </div>

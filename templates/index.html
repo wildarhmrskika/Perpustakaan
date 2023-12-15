@@ -61,7 +61,7 @@
   <div class="container d-flex g column-gap-3 row-gap-3 flex-wrap justify-content-center panini">
     <div class="container text-center">
       {% for i in a %}
-      <button type="button" class="btn btn-outline-primary">{{ i[1] }}</button>
+      <a class="text-decoration-none" href='http://127.0.0.1:5000/tags/{{ i[1] }}'><button type="button" class="btn btn-outline-primary text-uppercase">{{ i[1] }}</button></a>
       {% endfor %}
       <center>
         <hr style="width: 50vh" />
