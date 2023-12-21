@@ -86,10 +86,18 @@ def baca(id_buku):
     return render_template('read.html', buku=buku)
 
 
-@app.route('/tags/<kategori>')
+@app.route('/tags/<kategori>', methods=['GET', 'POST'])
 def cari_buku_kategori(kategori):
-    buku = semua_buku.tampil_berdasarkan_kategori(kategori)
-    return render_template('tags.html', buku=buku)
+    if request.method == "GET":
+        buku = semua_buku.tampil_berdasarkan_kategori(kategori)
+        return render_template('tags.html', buku=buku)
+    elif request.method == 'POST':
+        search_value = request.form.get("search")
+        buku = semua_buku.cari_buku(search_value)
+        if (buku):
+            return render_template('cari.html', data_buku=buku)
+        else:
+            return render_template('notfound.html')
 
 
 if __name__ == '__main__':
