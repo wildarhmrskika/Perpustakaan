@@ -19,7 +19,7 @@ class DatabaseManager:
         self.conn.commit()
         return cursor
 
-
+# 
 class Buku(DatabaseManager):
     def __init__(self, db_file, judul, kategori, deskripsi, file, sampul):
         super().__init__(db_file)
