@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Link Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+
+    <title>Perpustakaan Online</title>
+  </head>
+  <body>
+    <form method="post" enctype="multipart/form-data">
+      <div class="container mt-5">
+        <h3 class="text-center mb-4">Masukan Info Buku</h3>
+        <div class="mb-3 row">
+          <label for="text" class="col-sm-2 col-form-label">Judul Buku</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="judul" name="judul" />
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="pengarang" class="col-sm-2 col-form-label"
+            >Kategori</label
+          >
+          <div class="col-sm-10">
+            <select name="kategori" id="kategori" class="form-control">
+              <option value="sd">SD</option>
+              <option value="smp">SMP</option>
+              <option value="sma">SMA</option>
+              <option value="kuliah">Perguruan Tinggi</option>
+              <option value="umum">Umum</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="text" class="col-sm-2 col-form-label">Deskripsi</label>
+          <div class="col-sm-10">
+            <div class="mb-3">
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="3"
+                name="deskripsi"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="text" class="col-sm-2 col-form-label">Masukan File</label>
+          <div class="col-sm-10">
+            <input
+              class="form-control"
+              type="file"
+              id="formFileMultiple"
+              multiple
+              name="file"
+            />
+          </div>
+        </div>
+
+        <div class="mb-3 row">
+          <label for="text" class="col-sm-2 col-form-label"
+            >Masukan Sampul</label
+          >
+          <div class="col-sm-10">
+            <input
+              class="form-control"
+              type="file"
+              id="formFileMultiple"
+              multiple
+              name="sampul"
+            />
+          </div>
+        </div>
+        <input class="btn btn-primary w-100" type="submit" value="tambah" />
+      </div>
+    </form>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>

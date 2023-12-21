@@ -30,9 +30,6 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#panini">BukuTerbaru</a>
-            </li>
-            <li class="nav-item">
               <a class="nav-link" href="{{ url_for('login') }}">Login</a>
             </li>
           </ul>
@@ -42,7 +39,7 @@
               type="search"
               placeholder="Search"
               aria-label="Search"
-              name='ok'
+              name='search'
             />
             <button class="btn btn-outline-success" type="submit">
               Search
@@ -73,21 +70,21 @@
       class="container d-flex g column-gap-3 row-gap-3 flex-wrap justify-content-center panini"
     >
       <div class="container text-center">
-      	{% for i in a %}
-        <button type="button" class="btn btn-outline-primary text-uppercase">{{ i[1] }}</button>
+      	{% for i in tagar %}
+          <a class="text-decoration-none" href='http://127.0.0.1:5000/tags/{{ i[1] }}'><button type="button" class="btn btn-outline-primary text-uppercase">{{ i[1] }}</button></a>
         {% endfor %}
         <center>
           <hr style="width: 50vh" />
         </center>
       </div>
-      {% for i in data %}
+      {% for i in data_buku %}
       <div class="card" style="width: 18rem">
         <img src="static/img/{{ i[5] }}" class="card-img-top" alt="gambar" height="300" />
         <div class="card-body mx-auto text-center">
           <p class="card-text">
           	<h5 class="text-center"> {{ i[1] }} </h5>
           </p>
-          <button type="button" class="btn btn-outline-primary"><a class="text-decoration-none" href='{{ url_for("baca", keren=i[0] ) }}'> Baca Buku</a></button>
+          <a class="text-decoration-none" href='{{ url_for("baca", id_buku=i[0] ) }}'><button type="button" class="btn btn-outline-primary"> Baca Buku</button></a>
         </div>
       </div>
       {% endfor %}
