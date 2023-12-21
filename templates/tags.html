@@ -15,9 +15,9 @@
     />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+    <nav class="navbar navbar-dark bg-primary navbar-expand-lg fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Perpusku</a>
+        <a class="navbar-brand" href="">Perpusku</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -32,7 +32,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+              <a class="nav-link" href="{{ url_for('login') }}" style="color:white">Login</a>
             </li>
           </ul>
           <form class="d-flex" role="search" method="post">
@@ -43,7 +43,7 @@
               aria-label="Search"
               name="ok"
             />
-            <button class="btn btn-outline-success" type="submit">
+            <button class="btn btn-success" type="submit">
               Search
             </button>
           </form>
