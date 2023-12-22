@@ -45,7 +45,7 @@ class KelolaBuku(DatabaseManager):
         return self.execute_query(query).fetchall()
 
     def cari_buku(self, search_value):
-        query = f"SELECT * FROM terbaru WHERE LOWER(judul)=LOWER('{search_value}')"
+        query = f"SELECT * FROM terbaru WHERE judul LIKE '%{search_value}%'"
         return self.execute_query(query).fetchall()
 
     def baca_buku(self, id_buku):
