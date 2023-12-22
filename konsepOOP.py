@@ -1,5 +1,6 @@
 import sqlite3
 
+#putri
 class DatabaseManager:
     def __init__(self, db_file):
         self.conn = self.create_connection(db_file)
@@ -19,7 +20,7 @@ class DatabaseManager:
         self.conn.commit()
         return cursor
 
-# 
+# ocha
 class Buku(DatabaseManager):
     def __init__(self, db_file, judul, kategori, deskripsi, file, sampul):
         super().__init__(db_file)
