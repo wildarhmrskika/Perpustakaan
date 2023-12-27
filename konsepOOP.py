@@ -67,7 +67,7 @@ class User(DatabaseManager):
         # ini merupakan konsep engkapsulesain atau pembungkusan karena password ini sifanya privat bisa di lihat dari kodenya 
         # jadi password ini hanya bisa digunakan di kelas user tidak bisa digunakan di kelas lain ketika kita menggunakan
         # password di kelas lain tidak akan bisa
-         8
+         
 
     def tambah_data(self):
         query = f"INSERT INTO admin VALUES ('{self.username}', '{self.__password}')"
