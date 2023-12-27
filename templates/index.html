@@ -9,7 +9,7 @@
 </head>
 <!--Dari Putri Angraini Aziz_E1E122074-->
 <body>
-  <nav class="navbar navbar-dark bg-primary navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-dark navbar-expand-lg fixed-top" style="background-color: red;">
     <div class="container-fluid">
       <img src="../static/img/logo.jpeg" width="50" alt="logo.png">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -24,7 +24,7 @@
         </ul>
         <form class="d-flex" role="search" method="post">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name='search' />
-          <button class="btn btn-success" type="submit">
+          <button class="btn btn-success" type="submit" style="background: blue;">
             Search
           </button>
         </form>
@@ -65,7 +65,7 @@
     >
       <div class="container text-center">
       	{% for i in tagar %}
-          <a class="text-decoration-none" href='http://127.0.0.1:5000/tags/{{ i[1] }}'><button type="button" class="btn btn-outline-primary text-uppercase">{{ i[1] }}</button></a>
+          <a class="text-decoration-none" href='http://127.0.0.1:5000/tags/{{ i[1] }}'><button type="button" class="btn btn-outline-primary text-uppercase" style="background: green;">{{ i[1] }}</button></a>
         {% endfor %}
         <center>
           <hr style="width: 50vh" />

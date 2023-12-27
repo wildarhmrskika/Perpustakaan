@@ -1,6 +1,7 @@
 import sqlite3
 
 #PUTRI ANGRAINI AZIZ
+# mama induk #
 class DatabaseManager:
     def __init__(self, db_file):
         self.conn = self.create_connection(db_file)
@@ -21,8 +22,12 @@ class DatabaseManager:
         return cursor
 
 # ROSALINA
+# inherintes 
+# kaerana dia mewarisi sifat dari induknya yaitu datebasemanajer #
 class Buku(DatabaseManager):
     def __init__(self, db_file, judul, kategori, deskripsi, file, sampul):
+        #super init dia pemanggilan konstruktor dari kelas induk , jadi super init  berguna ketika kelas anak memiliki konstruktor 
+        #sendiri dan ingin mengeksekusi konstruktor kelas induk juga #
         super().__init__(db_file)
         self.judul = judul
         self.kategori = kategori
@@ -53,11 +58,16 @@ class KelolaBuku(DatabaseManager):
         return self.execute_query(query).fetchall()
 
 # RAHMA DAMAYANTI
+
 class User(DatabaseManager):
     def __init__(self, db_file, username, password):
         super().__init__(db_file)
         self.username = username
         self.__password = password
+        # ini merupakan konsep engkapsulesain atau pembungkusan karena password ini sifanya privat bisa di lihat dari kodenya 
+        # jadi password ini hanya bisa digunakan di kelas user tidak bisa digunakan di kelas lain ketika kita menggunakan
+        # password di kelas lain tidak akan bisa
+         8
 
     def tambah_data(self):
         query = f"INSERT INTO admin VALUES ('{self.username}', '{self.__password}')"
@@ -75,3 +85,6 @@ class User(DatabaseManager):
                 return "200"
         else:
             return "404"
+        
+        # fungsinya sama tetapi perilakunya berbeda#
+        #kenapa dia inherintance karena dia mengamnbil dari satu sifat dari kelas induk yaitu def init
