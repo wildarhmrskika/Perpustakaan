@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,8 +9,9 @@
     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 </head>
 <!--Dari Putri Angraini Aziz_E1E122074-->
+
 <body>
-  <nav class="navbar navbar-dark navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-dark bg-primary navbar-expand-lg fixed-top">
     <div class="container-fluid">
       <img src="../static/img/logo.jpeg" width="50" alt="logo.png">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -24,7 +26,7 @@
         </ul>
         <form class="d-flex" role="search" method="post">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name='search' />
-          <button class="btn btn-success" type="submit" style="background: blue;">
+          <button class="btn btn-success" type="submit" style="background-color: blue;">
             Search
           </button>
         </form>
@@ -38,12 +40,12 @@
   <div class="container p-lg-0 justify-content-xxl-center">
     <h1 class="blockquote">Selamat Datang Di perpustakaan Online kami</h1>
     <p class="text-justify">
-      Kami hadir dengan koleksi yang luas dari berbagai judul buku, menghubungkan Anda dengan dunia 
-      pengetahuan dan hiburan. Dari novel bestseller hingga buku pelajaran terkini, kami siap menjadi teman 
+      Kami hadir dengan koleksi yang luas dari berbagai judul buku, menghubungkan Anda dengan dunia
+      pengetahuan dan hiburan. Dari novel bestseller hingga buku pelajaran terkini, kami siap menjadi teman
       setia dalam perjalanan literasi Anda.
-      Nikmati kemudahan akses kapanpun, di mana pun Anda berada. Temukan pengetahuan yang tak terbatas, 
-      telusuri dunia dengan setiap halaman yang Anda baca.  
-      Jelajahi koleksi kami, pilih buku-buku favorit Anda, dan biarkan kami menjadi mitra setia dalam 
+      Nikmati kemudahan akses kapanpun, di mana pun Anda berada. Temukan pengetahuan yang tak terbatas,
+      telusuri dunia dengan setiap halaman yang Anda baca.
+      Jelajahi koleksi kami, pilih buku-buku favorit Anda, dan biarkan kami menjadi mitra setia dalam
       perjalanan literasi Anda.
     </p>
     <p>
@@ -52,20 +54,19 @@
   </div>
   <br />
   <br />
-<!--batas dari Putri Angraini Aziz-->
+  <!--batas dari Putri Angraini Aziz-->
 
-<!--rosalina-->
+  <!--rosalina-->
 
   <div class="container d-flex g column-gap-3 row-gap-3 flex-wrap justify-content-center panini">
     <div class="container text-center">
       <h2 class="blockquote">Baru Saja Di Upload</h2>
     </div>
-    <div
-      class="container d-flex g column-gap-3 row-gap-3 flex-wrap justify-content-center panini"
-    >
+    <div class="container d-flex g column-gap-3 row-gap-3 flex-wrap justify-content-center panini">
       <div class="container text-center">
-      	{% for i in tagar %}
-          <a class="text-decoration-none" href='http://127.0.0.1:5000/tags/{{ i[1] }}'><button type="button" class="btn btn-outline-primary text-uppercase">{{ i[1] }}</button></a>
+        {% for i in tagar %}
+        <a class="text-decoration-none" href='http://127.0.0.1:5000/tags/{{ i[1] }}'><button type="button"
+            class="btn btn-outline-primary text-uppercase">{{ i[1] }}</button></a>
         {% endfor %}
         <center>
           <hr style="width: 50vh" />
@@ -76,9 +77,10 @@
         <img src="static/img/{{ i[5] }}" class="card-img-top" alt="gambar" height="300" />
         <div class="card-body mx-auto text-center">
           <p class="card-text">
-          	<h5 class="text-center"> {{ i[1] }} </h5>
+          <h5 class="text-center"> {{ i[1] }} </h5>
           </p>
-          <a class="text-decoration-none" href='{{ url_for("baca", id_buku=i[0] ) }}'><button type="button" class="btn btn-outline-primary"> Baca Buku</button></a>
+          <a class="text-decoration-none" href='{{ url_for("baca", id_buku=i[0] ) }}'><button type="button"
+              class="btn btn-outline-primary"> Baca Buku</button></a>
         </div>
       </div>
       {% endfor %}
