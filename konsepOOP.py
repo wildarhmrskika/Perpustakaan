@@ -1,6 +1,6 @@
 import sqlite3
 
-#PUTRI ANGRAINI AZIZ
+#PUTRI ANGRAINI AZIZ_E1E122074
 class DatabaseManager:
     def __init__(self, db_file):
         self.conn = self.create_connection(db_file)
