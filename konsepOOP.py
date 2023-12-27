@@ -1,6 +1,6 @@
 import sqlite3
 
-#E1E122074_PUTRI ANGRAINI AZIZ
+#PUTRI ANGRAINI AZIZ
 class DatabaseManager:
     def __init__(self, db_file):
         self.conn = self.create_connection(db_file)
@@ -34,7 +34,7 @@ class Buku(DatabaseManager):
         query = f"INSERT INTO terbaru VALUES (null, '{self.judul}', '{self.kategori}', '{self.deskripsi}', '{self.file}', '{self.sampul}')"
         self.execute_query(query)
 
-#WILDA
+#WILDA 
 class KelolaBuku(DatabaseManager):
     def tampilkan_buku(self):
         query = "SELECT * FROM terbaru"
