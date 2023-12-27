@@ -1,6 +1,6 @@
 import sqlite3
 
-#putri
+#E1E122074_PUTRI ANGRAINI AZIZ
 class DatabaseManager:
     def __init__(self, db_file):
         self.conn = self.create_connection(db_file)
@@ -20,7 +20,7 @@ class DatabaseManager:
         self.conn.commit()
         return cursor
 
-# ocha
+# ROSALINA
 class Buku(DatabaseManager):
     def __init__(self, db_file, judul, kategori, deskripsi, file, sampul):
         super().__init__(db_file)
@@ -34,7 +34,7 @@ class Buku(DatabaseManager):
         query = f"INSERT INTO terbaru VALUES (null, '{self.judul}', '{self.kategori}', '{self.deskripsi}', '{self.file}', '{self.sampul}')"
         self.execute_query(query)
 
-
+#WILDA
 class KelolaBuku(DatabaseManager):
     def tampilkan_buku(self):
         query = "SELECT * FROM terbaru"
@@ -52,7 +52,7 @@ class KelolaBuku(DatabaseManager):
         query = f'select * from terbaru where id={id_buku}'
         return self.execute_query(query).fetchall()
 
-
+# RAHMA DAMAYANTI
 class User(DatabaseManager):
     def __init__(self, db_file, username, password):
         super().__init__(db_file)
