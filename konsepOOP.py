@@ -25,7 +25,6 @@ class Buku(DatabaseManager): #ini inheritance
     def __init__(self, db_file, judul, kategori, deskripsi, file, sampul):
         super().__init__(db_file)
         self.judul = judul
-        # ini merupakan encapsulasi berbentuk public yaitu abribut public yg bisa diakses di class manapun
         self.kategori = kategori
         self.deskripsi = deskripsi
         self.file = file
@@ -59,10 +58,8 @@ class KelolaBuku(DatabaseManager):
 class User(DatabaseManager):
     def __init__(self, db_file, username, password):
         super().__init__(db_file)
-        self.__username = username
-        # Ini saya buat atribut username menjadi private dengan cara menambahkan __ sebelum nama atributnya sehingga ini akan mengimplementasikan konsep encapsulasi
+        self.username = username
         self.__password = password 
-        # Ini merupakan konsep encapsulasi pertama , yaitu menjadikan atribut password menjadi private dengan menambahkan __ sebelum nama atribut atau property nya 
 
     def tambah_data(self):
         query = f"INSERT INTO admin VALUES ('{self.__username}', '{self.__password}')"
@@ -81,13 +78,3 @@ class User(DatabaseManager):
         else:
             return "404"
 
-
-class Favorite(DatabaseManager):
-    def __init__(self, db_file, id_buku, username):
-        super().__init__(db_file)
-        self.id_buku = id_buku
-        self.username = username
-
-    def tambah_data(self):
-        query = f"INSERT INTO favorite VALUES ('', '{self.id_buku}', '{self.username}')"
-        self.execute_query(query)
