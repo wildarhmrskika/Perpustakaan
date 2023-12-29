@@ -31,7 +31,7 @@ class Buku(DatabaseManager): #ini inheritance
         self.sampul = sampul
 
     def tambah_data(self):
-        query = f"INSERT INTO terbaru VALUES (null, '{self.judul}', '{self.kategori}', '{self.deskripsi}', '{self.file}', '{self.sampul}')" #mede tambah data kelas buku dan user (metode ini menambahkan data pada buku yang terbaru)
+        query = f"INSERT INTO terbaru VALUES (null, '{self.judul}', '{self.kategori}', '{self.deskripsi}', '{self.file}', '{self.sampul}')" #metode tambah data mempunyai atribut yang sama kelas buku dan user (metode ini menambahkan data pada buku yang terbaru)
         self.execute_query(query)
 
 
@@ -62,7 +62,7 @@ class User(DatabaseManager):#ini inheritance
         self.__password = password 
 
     def tambah_data(self):
-        query = f"INSERT INTO admin VALUES ('{self.__username}', '{self.__password}')"  #mede tambah data kelas buku dan use(metode ini menambahkan buku pada admin)
+        query = f"INSERT INTO admin VALUES ('{self.__username}', '{self.__password}')"  #metode tambah data  mempunyai atribut yang sama dari kelas buku dan user(metode ini menambahkan buku pada admin)
         self.execute_query(query) 
 
     def ambil_data(self):
