@@ -36,7 +36,7 @@ class Buku(DatabaseManager): #ini inheritance
 
 
 # Wilda Rahma Riskika E1E122035
-class KelolaBuku(DatabaseManager):
+class KelolaBuku(DatabaseManager): #ini inheritance
     def tampilkan_buku(self):
         query = "SELECT * FROM terbaru"
         return self.execute_query(query).fetchall()
@@ -55,14 +55,14 @@ class KelolaBuku(DatabaseManager):
 
 
 # Rahma Damayanti E1E122076
-class User(DatabaseManager):
+class User(DatabaseManager):#ini inheritance
     def __init__(self, db_file, username, password):
         super().__init__(db_file)
         self.username = username
         self.__password = password 
 
     def tambah_data(self):
-        query = f"INSERT INTO admin VALUES ('{self.__username}', '{self.__password}')"
+        query = f"INSERT INTO admin VALUES ('{self.__username}', '{self.__password}')" #ini termaksud enkapsulasi karna pada fungsi tambahkan data terdapat self.__username dibuat menjadi privat yang dimana hanya bisa di akses oleh kelas user
         self.execute_query(query) 
 
     def ambil_data(self):
@@ -77,4 +77,6 @@ class User(DatabaseManager):
                 return "200"
         else:
             return "404"
+        
+
 
