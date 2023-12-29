@@ -78,6 +78,17 @@ class User(DatabaseManager):#ini inheritance
         else:
             return "404"
         
+class favorite(DatabaseManager):
+    def __init__(self, db_file, id_buku, username, password):
+        super().__init__(db_file)
+        self.id_buku = buku
+        self.__username = username 
+        self.__password = password
+
+    def tambah_data(self):
+        query = f"INSERT INTO admin VALUES ('{self.id_buku}', '{self.__username}', '{self.__password})" #ini termaksud enkapsulasi karna pada fungsi tambahkan data terdapat self.__username dibuat menjadi privat yang dimana hanya bisa di akses oleh kelas user
+        self.execute_query(query)
+        
 
 #update
 #wildaaaaa
