@@ -16,7 +16,7 @@ class DatabaseManager:
 
     def execute_query(self, query):
         cursor = self.conn.cursor()
-        cursor.execute(query)
+        cursor.execute(query)                                      
         self.conn.commit()
         return cursor
 
@@ -31,12 +31,12 @@ class Buku(DatabaseManager): #ini inheritance
         self.sampul = sampul
 
     def tambah_data(self):
-        query = f"INSERT INTO terbaru VALUES (null, '{self.judul}', '{self.kategori}', '{self.deskripsi}', '{self.file}', '{self.sampul}')"
+        query = f"INSERT INTO terbaru VALUES (null, '{self.judul}', '{self.kategori}', '{self.deskripsi}', '{self.file}', '{self.sampul}')" #mede tambah data kelas buku dan user (metode ini menambahkan data pada buku yang terbaru)
         self.execute_query(query)
 
 
 # Wilda Rahma Riskika E1E122035
-class KelolaBuku(DatabaseManager): #ini inheritance
+class KelolaBuku(DatabaseManager):
     def tampilkan_buku(self):
         query = "SELECT * FROM terbaru"
         return self.execute_query(query).fetchall()
@@ -62,7 +62,7 @@ class User(DatabaseManager):#ini inheritance
         self.__password = password 
 
     def tambah_data(self):
-        query = f"INSERT INTO admin VALUES ('{self.__username}', '{self.__password}')" #ini termaksud enkapsulasi karna pada fungsi tambahkan data terdapat self.__username dibuat menjadi privat yang dimana hanya bisa di akses oleh kelas user
+        query = f"INSERT INTO admin VALUES ('{self.__username}', '{self.__password}')"  #mede tambah data kelas buku dan use(metode ini menambahkan buku pada admin)
         self.execute_query(query) 
 
     def ambil_data(self):
@@ -77,20 +77,14 @@ class User(DatabaseManager):#ini inheritance
                 return "200"
         else:
             return "404"
-        
-class favorite(DatabaseManager):
+
+class Favorite(DatabaseManager):
     def __init__(self, db_file, id_buku, username, password):
         super().__init__(db_file)
-        self.id_buku = buku
-        self.__username = username 
+        self.id_buku = id_buku
+        self.__username = username
         self.__password = password
 
     def tambah_data(self):
-        query = f"INSERT INTO admin VALUES ('{self.id_buku}', '{self.__username}', '{self.__password})" #ini termaksud enkapsulasi karna pada fungsi tambahkan data terdapat self.__username dibuat menjadi privat yang dimana hanya bisa di akses oleh kelas user
-        self.execute_query(query)
-        
-
-#update
-#wildaaaaa
-#wildaaa rrrrrrr
-#wildaaaaatttttttt
+        query = f"INSERT INTO Favorite VALUES ('{self.id_buku}', '{self.__username}', '{self.__password}')" 
+        self.execute_query(query) 
